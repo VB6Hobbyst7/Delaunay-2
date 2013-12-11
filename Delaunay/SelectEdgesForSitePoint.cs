@@ -1,22 +1,21 @@
 using System.Drawing;
-
 using System.Collections.Generic;
-
 
 namespace Delaunay
 {
-	public class selectEdgesForSitePointFClass {
+    public class selectEdgesForSitePointFClass
+    {
         static PointF _coord;
-	internal static List<Edge> selectEdgesForSitePointF(PointF coord, List<Edge> edgesToTest)
-	{
-        _coord = coord;
-		return edgesToTest.Filter(myTest);
-	}
+        internal static List<Edge> SelectEdgesForSitePointF(PointF coord, List<Edge> edgesToTest)
+        {
+            _coord = coord;
+            return edgesToTest.Filter(MyTest);
+        }
 
-    static bool myTest(Edge edge, int index, List<Edge> vector)
-		{
-			return ((edge.leftSite != null && edge.leftSite.coord() == _coord)
-			||  (edge.rightSite != null && edge.rightSite.coord() == _coord));
-		}
-}
+        static bool MyTest(Edge edge, int index, List<Edge> vector)
+        {
+            return ((edge.LeftSite != null && edge.LeftSite.Coord() == _coord)
+            || (edge.RightSite != null && edge.RightSite.Coord() == _coord));
+        }
+    }
 }

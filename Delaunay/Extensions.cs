@@ -10,15 +10,9 @@ namespace Delaunay
     {
         public static T Pop<T>(this List<T> list)
         {
-            switch (list.Count)
-            {
-                case 0:
-                    return default(T);
-                default:
-                    T item = list.Last();
-                    list.RemoveAt(list.Count - 1);
-                    return item;
-            }
+            T item = list.Last();
+            list.RemoveAt(list.Count - 1);
+            return item;
         }
 
         public static int Push<T>(this List<T> list, T item)
@@ -50,7 +44,6 @@ namespace Delaunay
 
                 for (int j = n; j > i; j--)
                 {
-                    //if (((IComparable)list[j - 1]).CompareTo(list[j]) > 0)
                     if (check.Invoke(list[j - 1], list[j]) > 0)
                     {
                         T temp = list[j - 1];
@@ -59,12 +52,6 @@ namespace Delaunay
                     }
                 }
             }
-        }
-
-        public static int Unshift<T>(this List<T> list, T item)
-        {
-            list.Insert(0, item);
-            return list.Count;
         }
     }
 }

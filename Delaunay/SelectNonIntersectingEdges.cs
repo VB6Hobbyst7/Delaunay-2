@@ -6,21 +6,21 @@ namespace Delaunay
     public class selectNonIntersectingEdgesClass
     {
         static BitmapData _keepOutMask;
-        internal static List<Edge> selectNonIntersectingEdges(BitmapData keepOutMask, List<Edge> edgesToTest)
+        static PointF zeroPointF = new PointF();
+
+        internal static List<Edge> SelectNonIntersectingEdges(BitmapData keepOutMask, List<Edge> edgesToTest)
         {
             if (keepOutMask == null)
             {
                 return edgesToTest;
             }
             _keepOutMask = keepOutMask;
-
-            return edgesToTest.Filter(myTest);
+            return edgesToTest.Filter(MyTest);
         }
-        static PointF zeroPointF = new PointF();
 
-        static bool myTest(Edge edge, int index, List<Edge> vector)
+        static bool MyTest(Edge edge, int index, List<Edge> vector)
         {
-            BitmapData delaunayLineBmp = edge.makeDelaunayLineBmp();
+            BitmapData delaunayLineBmp = edge.MakeDelaunayLineBmp();
             bool notIntersecting = !(_keepOutMask.hitTest(zeroPointF, 1, delaunayLineBmp, zeroPointF, 1));
             delaunayLineBmp.dispose();
             return notIntersecting;

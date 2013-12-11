@@ -1,13 +1,13 @@
+using System;
 using System.Collections.Generic;
 
 namespace Delaunay
 {
-
-    public class Triangle
+    public class Triangle : IDisposable
     {
         private List<Site> _sites;
 
-        public List<Site> sites
+        public List<Site> Sites
         {
             get
             {
@@ -23,11 +23,10 @@ namespace Delaunay
             _sites.Add(c);
         }
 
-        public void dispose()
+        public void Dispose()
         {
             _sites.Clear();
             _sites = null;
         }
-
     }
 }
