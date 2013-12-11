@@ -1,0 +1,4 @@
+C:\GitHub\Delaunay\Delaunay\bin\Release\Delaunay.dll
+C:\GitHub\Delaunay\Delaunay\bin\Release\Delaunay.pdb
+C:\GitHub\Delaunay\Delaunay\obj\Release\Delaunay.dll
+C:\GitHub\Delaunay\Delaunay\obj\Release\Delaunay.pdb
