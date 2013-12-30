@@ -1,0 +1,11 @@
+C:\GitHub\Delaunay\Example\bin\Release\Example.exe.config
+C:\GitHub\Delaunay\Example\bin\Release\Example.exe
+C:\GitHub\Delaunay\Example\bin\Release\Example.pdb
+C:\GitHub\Delaunay\Example\bin\Release\Delaunay.dll
+C:\GitHub\Delaunay\Example\bin\Release\Delaunay.pdb
+C:\GitHub\Delaunay\Example\obj\Release\Example.csprojResolveAssemblyReference.cache
+C:\GitHub\Delaunay\Example\obj\Release\Example.MainForm.resources
+C:\GitHub\Delaunay\Example\obj\Release\Example.Properties.Resources.resources
+C:\GitHub\Delaunay\Example\obj\Release\Example.csproj.GenerateResource.Cache
+C:\GitHub\Delaunay\Example\obj\Release\Example.exe
+C:\GitHub\Delaunay\Example\obj\Release\Example.pdb
